@@ -145,7 +145,7 @@ top_scores = top_scores[new_cols]
 
 # create spreadsheet
 dt = current_datetime()
-fn = f"output/scores_{ENTRANT_ID}-{entrant_name}_{dt}"
+fn = f"scores_{ENTRANT_ID}-{entrant_name}_{dt}"
 top_scores.to_excel(fn + ".xlsx", index=False, freeze_panes=[1,1])
 wb = px.load_workbook(fn + ".xlsx")
 ws = wb.active
